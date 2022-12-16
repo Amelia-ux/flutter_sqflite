@@ -8,7 +8,7 @@ class Item {
   Item(this._itemId, this._name, this._price, this._stock);
 
   Item.map(dynamic obj) {
-    this._itemId = obj['kode_barang'];
+    this._itemId = obj['item_id'];
     this._name = obj['name'];
     this._price = obj['price'];
     this._stock = obj['stock'];
@@ -17,7 +17,7 @@ class Item {
   String get itemId => _itemId;
   String get name => _name;
   int get price => _price;
-  int get stok => _stock;
+  int get stock => _stock;
 
   Map<String, dynamic> toMap() {
     var map = <String, dynamic>{};
@@ -25,7 +25,7 @@ class Item {
     map['item_id'] = _itemId;
     map['name'] = _name;
     map['price'] = _price;
-    map['stok'] = _stock;
+    map['stock'] = _stock;
     return map;
   }
 

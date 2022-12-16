@@ -52,7 +52,7 @@ class _EntryFormState extends State<EntryForm> {
       itemIdController.text = item.itemId;
       nameController.text = item.name;
       priceController.text = item.price.toString();
-      stockController.text = item.stok.toString();
+      stockController.text = item.stock.toString();
     }
     super.initState();
   }

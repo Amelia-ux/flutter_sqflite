@@ -47,7 +47,7 @@ class _ItemsState extends State<Items> {
                     widget.itemData[index].price.toString(),
                     style: const TextStyle(fontSize: 16),
                   ),
-                  Text(widget.itemData[index].stok.toString()),
+                  Text(widget.itemData[index].stock.toString()),
                 ],
               ),
               trailing: GestureDetector(
