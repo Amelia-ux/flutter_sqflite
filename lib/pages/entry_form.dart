@@ -128,29 +128,25 @@ class _EntryFormState extends State<EntryForm> {
               child: Row(
                 children: <Widget>[
                   Expanded(
-                    child: RaisedButton(
-                      color: Colors.green,
-                      textColor: Colors.white,
+                    child: ElevatedButton(
+                      onPressed: _saveData,
                       child: const Text(
                         'Save',
                         textScaleFactor: 1.5,
                       ),
-                      onPressed: _saveData,
                     ),
                   ),
                   Container(
                     width: 5.0,
                   ),
                   Expanded(
-                    child: RaisedButton(
-                      color: Colors.red,
-                      textColor: Colors.white,
+                    child: ElevatedButton(
                       child: const Text(
                         'Cancel',
                         textScaleFactor: 1.5,
                       ),
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.pop(context, item);
                       },
                     ),
                   ),
@@ -162,10 +158,4 @@ class _EntryFormState extends State<EntryForm> {
       ),
     );
   }
-
-  RaisedButton(
-      {required Color color,
-      required Color textColor,
-      required Text child,
-      required void Function() onPressed}) {}
 }
